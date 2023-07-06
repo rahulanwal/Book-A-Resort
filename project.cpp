@@ -442,13 +442,16 @@ int main()
         path.push_back({8, 10, 200});
         path.push_back({9, 10, 900});
 
-        cout << "Enter the spot index number between them to find the shortest path :- ";
+        cout << "Enter the spots index number between them to find the shortest path :- " << endl;
         int sp1, sp2;
-        cin >> sp1 >> sp2;
+        cout << "First spot index number :- ";
+        cin >> sp1;
+        cout << "Second spot index number :- ";
+        cin >> sp2;
 
-        cout << "The shortest path between " << feature_cost[sp1].first << " and " << feature_cost[sp2].first << " is " << dijkstra(path, vertex, edges, sp1, sp2) << endl;
+        cout << "The shortest path between " << feature_cost[sp1].first << " and " << feature_cost[sp2].first << " is " << dijkstra(path, vertex, edges, sp1, sp2) << " meters." << endl;
 
-        cout << "If you want to about more spots than enter 1 and then spots index number else enter 0";
+        cout << "If you want to about more spots than enter 1 and then spots index number else enter 0 :- ";
 
         while (1)
         {
@@ -456,10 +459,13 @@ int main()
             cin >> morecnt;
             if (morecnt == 1)
             {
-                cout << "Enter the spot index number between them to find the shortest path :- ";
+                cout << "Enter the spot index number between them to find the shortest path :- "<<endl;
                 int sp3, sp4;
-                cin >> sp3 >> sp4;
-                cout << "The shortest path between " << feature_cost[sp3].first << " and " << feature_cost[sp4].first << " is " << dijkstra(path, vertex, edges, sp3, sp4) << endl;
+                cout << "First spot index number :- ";
+                cin >> sp3;
+                cout << "Second spot index number :- ";
+                cin >> sp4;
+                cout << "The shortest path between " << feature_cost[sp3].first << " and " << feature_cost[sp4].first << " is " << dijkstra(path, vertex, edges, sp3, sp4) << " meters." << endl;
             }
             else
             {
